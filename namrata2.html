@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script defer src="https:/use.fontawesome.com/releases/v5.0.6/js/all.js"></script>></script>
+	<title>Animation</title>
+
+	<style>
+		.search-btn
+		{
+			color: #e84118;
+			float:right;
+			width: 40px;
+			height:40px;
+			border-radius:50%;
+			background:white;
+		}
+		.search-txt
+		{
+			border:none;
+			background:none;
+			outline:none;
+			float:left;
+			padding:0;
+			color:white;
+			font-size:16px;
+			transition: 0.4s;
+			line-height:40px;
+			width:340px;
+		}
+		.search-box
+{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	background: white;
+	color:blue;
+	height:40px;
+	border-radius: 40px;
+}
+.search-box:hover > .search-txt
+{
+	width:240px;
+	padding:0 6px;
+}
+.search-box:hover > .search-btn
+{
+	background:white;
+	transition: 0.4s;
+}
+
+		p,li
+		{
+			color: white;
+			text-shadow: 2px 3px 5px black;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+		}
+		div.a
+		{
+			text-align: center;
+		}
+	    .grid-container
+		{
+			display: grid;
+			align-items: center;
+			justify-content: center;
+			
+			
+			/*grid-template-columns: auto auto auto;
+			grid-template-rows: auto auto;
+			padding:5px;
+			grid-area: a;
+			text-align: center;
+			position: relative;*/
+		}
+		.grid-item
+		{
+			padding: 3px;
+			
+			backdrop-filter: blur(20px);
+			text-align: center;
+			font-size: 30px;
+			align-content: center;
+		}
+		.grid-item2
+		{
+			padding: 3px;
+			
+			text-align: center;
+			font-size: 30px;
+			align-content: center;
+		}
+		.fixed-header,.fixed-footer
+		{
+			width:100%;
+			position:fixed;
+			background-color: black;
+			padding: 10px;
+			color:blue;
+		}
+		.fixed-footer
+		{
+			bottom:0;
+
+		}
+		.fixed-header
+		{
+			top:0;
+			height: 30px;
+			font-family: Script;
+		}
+		body
+		{
+			
+			padding-top: 40px;
+			padding-bottom: 70px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: black;
+			animation-name: demo;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate-reverse;
+		}
+		@keyframes demo
+		{
+			from{background-image: url("project1.jpg");}
+
+			to{background-image: url("project.jpg");}
+		}
+	</style>
+</head>
+<body >
+<div class="header">
+	<div class="a">
+		<div class="fixed-header"> My Project </div>
+		<div class="grid-container">
+
+	<div class="grid-item">
+		<div class="a">
+			<ul>
+			<li><a href="#Home">Home</a></li>
+			<li><a href="#Contact">Contact</a></li>
+			<li><a href="#About">About</a></li>
+		</ul>
+		
+		</div>
+	</div>
+	<div class="grid-item2">
+		<div class="search-box">
+			<input class="search-txt" type="text" style="color:black" placeholder="Type to search">
+			<a class="search-btn" href="#">
+				<i class="fas fa-search"></i>
+			</a>
+		</div>
+	</div>
+	
+</div>
+</div>
+		</div>
+		<div class="fixed-footer"></div>
+	</div>
+</body>
+</html>
